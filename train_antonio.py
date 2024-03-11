@@ -49,10 +49,10 @@ def process_data(X, y):
     return X_train, X_test, y_train, y_test
 
 
-def create_model(X_train):
+def create_model(X):
     reset_seeds()
     model = Sequential()
-    model.add(InputLayer(input_shape=(X_train.shape[1], )))
+    model.add(InputLayer(input_shape=(X.shape[1], )))
     model.add(Dense(10, activation='relu'))
     model.add(Dense(10, activation='relu'))
     model.add(Dense(3, activation='softmax'))
